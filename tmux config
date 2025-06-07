@@ -1,0 +1,17 @@
+set -g prefix C-Space
+bind r source-file ~/.tmux.conf \; display "reloaded config file"
+set -g mouse on
+
+
+bind | split-window -hc "#{pane_current_path}"
+bind \\ split-window -hc "#{pane_current_path}"
+
+bind _ split-window -vc "#{pane_current_path}"
+bind - split-window -vc "#{pane_current_path}"
+
+
+bind "|" split-window -h -c "#{pane_current_path}"
+bind "\\" split-window -fh -c "#{pane_current_path}"
+
+bind "_" split-window -v -c "#{pane_current_path}"
+bind "-" split-window -fv -c "#{pane_current_path}"
